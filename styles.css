@@ -26,7 +26,7 @@ body, a:link, a:visited, a:active{
   height: 200px;
   width: auto;
   transform-origin: center;
-  transition: all 2s;
+  transition: top 2s, left 2s, opacity 1s;
   position:absolute;
 }
 .portal{

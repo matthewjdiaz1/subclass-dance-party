@@ -47,8 +47,13 @@ $(document).ready(function() {
 
     
     for (let i = 0; i < window.dancers.length; i++) {
-      // dancers center 2s
-      setTimeout(function() {window.dancers[i].$node.css({"top":"50%", "left":"50%"})}, Math.floor(Math.random() * 2000));
+      // dancers center 2-4s
+      setTimeout(function() {window.dancers[i].$node.css({"top":"50%", "left":"50%"})}, Math.floor((Math.random() * 1000)+1000));
+      // dancers opacity 4-6s
+      setTimeout(function() {window.dancers[i].$node.css({"opacity":"0"})},2400);
+      // dancers opacity 4-6s
+      setTimeout(function() {window.dancers[i].$node.css({"opacity":"1"})},4200);
+      
       
       let top = $("body").height() * Math.random() + 32;
       let left = $("body").width() * Math.random();
