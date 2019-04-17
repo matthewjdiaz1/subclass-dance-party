@@ -40,19 +40,23 @@ $(document).ready(function() {
         $(".portal").css({"width":"4000px", "top":"-1000px", "left":"-1000px"});
       }, 3000);
       
-    // portal disapear 6s
+    // portal normal size 6s
     setTimeout(function(){
-        $(".portal").css({"width":"0px", "top":"44%", "left":"44%"});
-      }, 6000);    
+        $(".portal").css({"width":"400px", "top":"44%", "left":"44%"});
+      }, 4000);   
+    // portal normal size 6s
+    setTimeout(function(){
+        $(".portal").css({"width":"0px"});
+      }, 7500);   
 
     
     for (let i = 0; i < window.dancers.length; i++) {
       // dancers center 2-4s
       setTimeout(function() {window.dancers[i].$node.css({"top":"50%", "left":"50%"})}, Math.floor((Math.random() * 1000)+1000));
-      // dancers opacity 4-6s
+      // dancers invis 0 4-6s
       setTimeout(function() {window.dancers[i].$node.css({"opacity":"0"})},2400);
-      // dancers opacity 4-6s
-      setTimeout(function() {window.dancers[i].$node.css({"opacity":"1"})},4200);
+      // dancers visible 4-6s
+      setTimeout(function() {window.dancers[i].$node.css({"opacity":"1"})},4900);
       
       
       let top = $("body").height() * Math.random() + 32;
@@ -60,7 +64,7 @@ $(document).ready(function() {
 
       // dancers random 4-6s
       setTimeout(function(){
-        window.dancers[i].$node.css({"top":top, "left":left})}, (Math.floor(Math.random() * 2000) + 4000));
+        window.dancers[i].$node.css({"top":top, "left":left})}, (Math.floor(Math.random() * 2000) + 4600));
       }
   });
 });
